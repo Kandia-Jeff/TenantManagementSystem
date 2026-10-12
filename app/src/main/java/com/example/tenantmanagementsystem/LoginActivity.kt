@@ -1,11 +1,11 @@
-package com.example.tenantmanagementsystemgroupa
+package com.example.tenantmanagementsystem
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tenantmanagementsystemgroupa.databinding.ActivityLoginBinding
+import com.example.tenantmanagementsystem.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
@@ -40,7 +40,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // NEW: implicit Intent to open the website
         binding.helpTextView.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.strathmore.edu"))
             startActivity(intent)

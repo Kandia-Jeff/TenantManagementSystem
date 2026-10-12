@@ -1,11 +1,12 @@
 package com.example.tenantmanagementsystem
 
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tenantmanagementsystemgroupa.databinding.ActivityMainBinding
+import com.example.tenantmanagementsystem.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,10 +25,9 @@ class MainActivity : AppCompatActivity() {
 
             val tenant = Tenant(name, phone, rent)
             binding.tenant = tenant
-            lastTenant = tenant   // NEW: remember the last saved tenant
+            lastTenant = tenant
         }
 
-        // NEW: implicit Intent to open the dialer
         binding.callButton.setOnClickListener {
             val tenant = lastTenant
             if (tenant == null) {
